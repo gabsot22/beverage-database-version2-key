@@ -4,7 +4,7 @@
 
 ## Author
 
-
+David Barnes
 
 ## Description
 
@@ -85,6 +85,8 @@ Solution Requirements:
 
 ## Outside Resources Used
 
-
+None
 
 ## Known Problems, Issues, And/Or Errors in the Program
+
+None
