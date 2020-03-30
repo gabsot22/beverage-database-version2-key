@@ -11,13 +11,13 @@ namespace cis237_assignment5
     {
         // Private Variables
         private DbSet<Beverage> beverages;
-        private BeverageTestEntities beverageEntities;
+        private BeverageContext beverageContext;
 
         // Constructor.
         public BeverageCollection()
         {
-            beverageEntities = new BeverageTestEntities();
-            beverages = beverageEntities.Beverages;
+            beverageContext = new BeverageContext();
+            beverages = beverageContext.Beverages;
         }
 
         // ToString override method to convert the collection to a string
@@ -93,7 +93,7 @@ namespace cis237_assignment5
             beverages.Add(newBeverage);
 
             // Save the changes to the Entities
-            beverageEntities.SaveChanges();
+            beverageContext.SaveChanges();
         }
 
         // Update a Beverage by id sending in the input from the UI
@@ -131,7 +131,7 @@ namespace cis237_assignment5
             }
 
             // Save the changes and get the number of updates that occured. Should be 1
-            int numberOfAltered = beverageEntities.SaveChanges();
+            int numberOfAltered = beverageContext.SaveChanges();
 
             // Return the evaluation of making sure the number of altered records is greater than zero.
             return (numberOfAltered > 0);
@@ -149,7 +149,7 @@ namespace cis237_assignment5
                 // Remove the beverage
                 beverages.Remove(beverageToFind);
                 // Save the changes and get the number of changes that happened on the save
-                int numberDeleted = beverageEntities.SaveChanges();
+                int numberDeleted = beverageContext.SaveChanges();
                 // Return the evaluation of making sure the number of altered records is more than zero.
                 return (numberDeleted > 0);
             }

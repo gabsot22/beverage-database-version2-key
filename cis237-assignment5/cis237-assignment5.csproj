@@ -53,20 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Beverage.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Beverage.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Beverage.cs">
-      <DependentUpon>Beverage.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Beverage.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Beverage.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Beverage.cs" />
     <Compile Include="BeverageCollection.cs" />
+    <Compile Include="BeverageContext.cs" />
     <Compile Include="IBeverageCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,26 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="Beverage.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Beverage.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Beverage.edmx.diagram">
-      <DependentUpon>Beverage.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Beverage.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Beverage.edmx</DependentUpon>
-      <LastGenOutput>Beverage.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Beverage.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Beverage.edmx</DependentUpon>
-      <LastGenOutput>Beverage1.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

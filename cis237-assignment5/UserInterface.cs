@@ -124,7 +124,7 @@ namespace cis237_assignment5
             answer = this.GetBoolField("Active", "Do you want to update the Item's {0} status? (y/n)");
             if (answer == "True")
             {
-                active = this.GetBoolField("Active", "What is the Item's new {0} status?");
+                active = this.GetBoolField("Active", "Is the Item now {0}? (y/n)");
             }
 
             //Return a string array containing all of the parts entered from the user
